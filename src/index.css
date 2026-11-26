@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+      --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+          --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+              --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+                }
+
+                  html {
+                      font-family: var(--font-sans);
+                          scroll-behavior: smooth;
+                            }
+
+                              h1, h2, h3, h4, .font-display {
+                                  font-family: var(--font-display);
+                                    }
+
+                                      code, pre, kbd, samp, .font-mono {
+                                          font-family: var(--font-mono);
+                                            }
+                                            }
+
+                                            /* Custom subtle scrollbars */
+                                            ::-webkit-scrollbar {
+                                              width: 6px;
+                                                height: 6px;
+                                                }
+
+                                                ::-webkit-scrollbar-track {
+                                                  background: transparent;
+                                                  }
+
+                                                  ::-webkit-scrollbar-thumb {
+                                                    background: rgba(100, 116, 139, 0.25);
+                                                      border-radius: 9999px;
+                                                      }
+
+                                                      ::-webkit-scrollbar-thumb:hover {
+                                                        background: rgba(100, 116, 139, 0.45);
+                                                        }
+
+                                                        .dark ::-webkit-scrollbar-thumb {
+                                                          background: rgba(148, 163, 184, 0.2);
+                                                          }
+
+                                                          .dark ::-webkit-scrollbar-thumb:hover {
+                                                            background: rgba(148, 163, 184, 0.35);
+                                                            }
+
+                                                            /* Safe area padding helper for mobile bottom bars */
+                                                            .pb-safe {
+                                                              padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+                                                              }
+
+                                                              @media (prefers-reduced-motion: reduce) {
+                                                                *, *::before, *::after {
+                                                                    animation-duration: 0.01ms !important;
+                                                                        animation-iteration-count: 1 !important;
+                                                                            transition-duration: 0.01ms !important;
+                                                                              }
+                                                                              }

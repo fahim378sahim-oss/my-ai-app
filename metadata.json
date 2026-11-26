@@ -1,0 +1,11 @@
+{
+      "name": "My AI App",
+        "description": "A personal AI assistant with real-time streaming chat, multimodal attachments, and customizable personal memory.",
+          "requestFramePermissions": [
+              "microphone"
+                ],
+                  "majorCapabilities": [
+                      "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+                        ]
+                        }
+}
