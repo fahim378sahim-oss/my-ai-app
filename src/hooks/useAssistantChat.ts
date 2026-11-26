@@ -30,7 +30,7 @@ import {
                                                   const [profile, setProfile] = useState<UserProfile>(() => loadProfile());
                                                     const [theme, setTheme] = useState<'light' | 'dark'>(() => loadTheme());
                                                       const [draftMode, setDraftMode] = useState<AssistantMode>('general');
-                                                        const [thinkingDepth, setThinkingDepth] = useState<ThinkingDepth>('balanced');
+                                                        const [thinkingDepth, setThinkingDepth] = useState<ThinkingDepth>("quick");
                                                           const [input, setInput] = useState('');
                                                             const [attachments, setAttachments] = useState<Attachment[]>([]);
                                                               const [isStreaming, setIsStreaming] = useState(false);
